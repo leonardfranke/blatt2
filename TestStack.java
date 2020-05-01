@@ -44,9 +44,8 @@ public class TestStack
 	
 	
 	private void testArea() {
-		Arena arena = new Arena();
-		System.out.println(arena.getArea(0, 1));
-		//assertInt(arena.getArea(1, 1), 1, "Error in testAre: test 1");
+		Arena arena = new Arena();	
+		
 	}
 
 }

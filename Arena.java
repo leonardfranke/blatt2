@@ -9,10 +9,15 @@ public class Arena
 			return -1;
 		}
 		
-		double angle = Math.atan(y / x) + Math.PI/2;
-		System.out.println("angle: " + angle);
+		double angle = Math.toDegrees(Math.atan(x / y));
 		
-		int area = (int) (angle/(2*Math.PI));
+		if(y >= 0) {
+			angle += 360;
+		} else if (y < 0) {
+			angle += 180;
+		}
+		angle %= 360;
+		int area = (int) (angle*12/360);
 		
 		return area;
 		
