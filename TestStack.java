@@ -32,7 +32,7 @@ public class TestStack
 		StringStack stack2 = new StringStack(stack1);
 		
 		assertString(stack1.pop(), stack2.pop(), "Error in testStackCopy of first element");		
-		assertString(stack1.pop(), stack2.pop(), "Error in testStackCopy of first element");		
+		assertString(stack1.pop(), stack2.pop(), "Error in testStackCopy of second element");		
 	}
 	
 	private void assertInt(int int1, int int2, String errorMsg) {
@@ -45,10 +45,13 @@ public class TestStack
 	
 	private void testArea() {
 		Arena arena = new Arena();	
-		for(int i= 0; i<360; i++) {
-			System.out.println(Math.cos(Math.toRadians(i)) + " " + Math.sin(Math.toRadians(i)));
-			System.out.println(arena.getArea(Math.cos(Math.toRadians(i)), Math.sin(Math.toRadians(i))));
-		}
+		
+		assertInt(arena.getArea(0.5,0.5), 2, "Error in testAre of first element");
+		assertInt(arena.getArea(-0.5,0.5), 11, "Error in testAre of second element");
+		assertInt(arena.getArea(0.5,-0.5), 5, "Error in testAre of third element");
+		assertInt(arena.getArea(-0.5,-0.5), 8, "Error in testAre of fourth element");
+		assertInt(arena.getArea(1.5,1.5), -1, "Error in testAre of border element");		
+	
 	}
 
 }
