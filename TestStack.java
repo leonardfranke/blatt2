@@ -45,7 +45,10 @@ public class TestStack
 	
 	private void testArea() {
 		Arena arena = new Arena();	
-		
+		for(int i= 0; i<360; i++) {
+			System.out.println(Math.cos(Math.toRadians(i)) + " " + Math.sin(Math.toRadians(i)));
+			System.out.println(arena.getArea(Math.cos(Math.toRadians(i)), Math.sin(Math.toRadians(i))));
+		}
 	}
 
 }

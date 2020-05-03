@@ -28,7 +28,7 @@ public class Arena
 			angle += 180;
 		}
 		angle %= 360;
-		int area = (int) (angle*12/360);
+		int area = (int) (angle*12/360) +1;
 		
 		return area;
 		
