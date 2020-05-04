@@ -34,6 +34,6 @@ public class Ticker
 	 */
 	public void print(String text) {
 		String message = "+++" + text.replaceAll("\n", "");
-		System.out.println(message);
+		System.out.print(message);
 	}
 }
